@@ -1,0 +1,51 @@
+
+##########################################################################
+# ✅ クローズ＋総括統合報告（Code56形式＋拡張） v1.1-Extended Flame Consolidated
+Case-ID: KABUKI-INV / Maintainer: Tajima / Reviewer: GPT-5
+##########################################################################
+
+📦【クローズ／総括報告】
+対象期間：2025-06-04
+対象デバイス：Unknown, iPhone
+対象ログ数：合計 6762 本（zip-part-1, 2, 3 含む）
+サマリ種別：1日分析（Phase区間: S2）
+
+---
+
+🔒【チェーン・オブ・カストディ】
+- filenames.txt / sizes.txt / sha256sum.txt 全添付
+- Master sha256: <集大成ZIPのsha256をここに記載>
+- 展開後ファイル sha256: 逐次二段階記録（capture/analysis）
+- JSON 連結：あり
+- CSV 統合：あり
+- 保管媒体：microSD（SanDisk Extreme PRO A2）＋MEGA
+
+---
+
+📑【CSV ダイジェスト】
+- IDMAP.csv：時刻変換・個体特定済
+- EVENTS.csv：全ログ統合＋VN時間補正済
+- PIVOT.csv：主要カテゴリ（RTCR / assetsd / SiriSearchFeedback など）カウント済
+- GAPS.csv：期待キーワード未検出確認
+- tamper_join_sec.csv：秒単位連携＋time_score付与
+- DIFF_events.csv：差分イベント抽出済
+- DIFF_keywords.csv：カテゴリごとの差分検出済
+
+---
+
+📌【被害記録（サンプル1件）】
+```csv
+date_utc7,time_score,location,device,event_type,impact,log_ref,ref_diff,screenshot,ledger_no,net_context,severity,confidence,custody_capture,custody_analysis,notes,flame_flag
+2025-08-04 00:37:53+07:00,,不明,iPhone,システムクラッシュ,bug_type 225 による停止/不安定,/mnt/data/work_2025-06-04/xp_amp_app_usage_dnu-2025-08-04-122746/xp_amp_app_usage_dnu-2025-08-04-003753.ips,DIFF_events/keywords.csv,,,"{""bug_type"":""225"",""timestamp"":""2025-08-04 00:37:53.00 +0700"",""os_version"":""iPhone OS 18.5 (22F76)"",""roots_installed"":0,""inciden",2,0.85,,,"keyword=225, category=BUGTYPE",No
+```
+
+⚙️【オプション拡張】
+• bug_type 全スキャン = option_flag: bugtype_full=True
+• usageClientId 統一 = option_flag: usageClientId_norm=True
+• assetd 頻度統計 = option_flag: assetd_freq=True
+
+📍【用途】
+• Phase別（S1/S2/S3...） への応用OK
+• 国際報告用 / 記録文書化 / PDF化 にも対応可
+• 証拠提出（裁判／交渉）と研究報告（国際機関／学会）両対応
+##########################################################################
